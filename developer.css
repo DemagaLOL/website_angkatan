@@ -1,0 +1,27 @@
+/* Halaman Developer: kartu tim, teknologi
+   Pemilik: Dzaki */
+
+/* ---------- Developer ---------- */
+.team { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1.25rem; }
+.member { background:#fff; border-radius:var(--radius); overflow:hidden; text-align:center;
+  border:1px solid var(--line); box-shadow:var(--shadow); padding-bottom:1.5rem; }
+.member::before { content:""; display:block; height:70px; background:linear-gradient(135deg,var(--navy-900),var(--navy-800) 50%,var(--navy-600)); }
+.avatar { width:90px; height:90px; border-radius:50%; margin:-45px auto .75rem; border:4px solid #fff;
+  background:var(--navy-700); color:var(--red-light); display:grid; place-items:center; font-size:1.6rem; font-weight:700; }
+.member strong { color:var(--navy-800); }
+.member .nim { color:var(--muted); font-family:ui-monospace,Consolas,monospace; font-size:.88rem; }
+.member .role { display:inline-block; margin-top:.6rem; padding:.2rem .8rem; border-radius:999px;
+  background:var(--navy-100); color:var(--navy-700); font-size:.8rem; font-weight:500; }
+.tech { display:flex; flex-wrap:wrap; gap:.6rem; list-style:none; }
+.tech li { background:var(--navy-800); color:#fff; padding:.4rem 1rem; border-radius:999px; font-size:.88rem; }
+code { background:var(--navy-100); color:var(--navy-700); padding:.1rem .4rem; border-radius:4px; font-size:.9em; }
+
+/* ---------- Developer: kartu berfoto, klik membuka profil ---------- */
+a.member { display:block; color:inherit; text-decoration:none; transition:transform .25s, box-shadow .25s; }
+a.member:hover { transform:translateY(-6px); box-shadow:0 16px 36px rgba(1,9,71,.18); }
+a.member:focus-visible { outline:3px solid var(--navy-500); outline-offset:3px; }
+.member .avatar { overflow:hidden; }
+.member .avatar img { width:100%; height:100%; object-fit:cover; transition:transform .3s; }
+a.member:hover .avatar img { transform:scale(1.08); }
+.member .nick { display:block; color:var(--red); font-weight:700; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; }
+.member strong { display:block; padding:0 1rem; line-height:1.4; }
