@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantherion - Informatika Angkatan 26</title>
+  <link rel="icon" href="img/logo-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/beranda.css">
+  <link rel="stylesheet" href="css/easteregg.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+  <div class="topbar"><div class="container">
+    <span>Program Studi Informatika · Angkatan 2026</span>
+    <span>Bersama Bertumbuh, Bersama Berkarya</span>
+  </div></div>
+  <nav class="navbar"><div class="container">
+    <a href="index.html" class="logo"><img src="img/logo.png" alt=""><span><strong>PANTHERION</strong><small>Informatika Angkatan 26</small></span></a>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="nav-btn" aria-label="Buka menu"><span></span><span></span><span></span></label>
+    <ul>
+      <li><a href="index.html" class="active">Profil</a></li>
+      <li><a href="filosofi.html">Filosofi</a></li>
+      <li><a href="album.html">Album</a></li>
+      <li><a href="search.html">Cari Orang</a></li>
+      <li><a href="developer.html">Developer</a></li>
+    </ul>
+  </div></nav>
+
+  <header class="page-hero home">
+    <!-- Foto album bergeser terus di belakang gradasi biru (daftar foto ditulis dua kali agar loop mulus) -->
+    <div class="hero-slides" aria-hidden="true">
+      <div class="hero-track">
+        <img src="img/album/kecil/album-02.jpg" alt=""><img src="img/album/kecil/album-01.jpg" alt="">
+        <img src="img/album/kecil/album-06.jpg" alt=""><img src="img/album/kecil/album-13.jpg" alt="">
+        <img src="img/album/kecil/album-09.jpg" alt=""><img src="img/album/kecil/album-05.jpg" alt="">
+        <img src="img/album/kecil/album-16.jpg" alt=""><img src="img/album/kecil/album-19.jpg" alt="">
+        <img src="img/album/kecil/album-02.jpg" alt=""><img src="img/album/kecil/album-01.jpg" alt="">
+        <img src="img/album/kecil/album-06.jpg" alt=""><img src="img/album/kecil/album-13.jpg" alt="">
+        <img src="img/album/kecil/album-09.jpg" alt=""><img src="img/album/kecil/album-05.jpg" alt="">
+        <img src="img/album/kecil/album-16.jpg" alt=""><img src="img/album/kecil/album-19.jpg" alt="">
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-text">
+        <span class="eyebrow">Informatika Angkatan 26</span>
+        <h1>PANTHERION</h1>
+        <p>Berani, tangguh, dan bergerak bersama. Kenali kami lebih dekat:
+          filosofi, momen kebersamaan, dan seluruh anggota angkatan.</p>
+        <div class="btn-group">
+          <a href="search.html" class="btn btn-accent">Cari Teman Seangkatan</a>
+          <a href="filosofi.html" class="btn btn-outline">Filosofi Angkatan</a>
+        </div>
+      </div>
+      <button type="button" class="hero-logo" aria-label="Perbesar logo Pantherion">
+        <img src="img/logo.png" alt="Logo Pantherion IF 26" draggable="false">
+      </button>
+    </div>
+  </header>
+
+  <!-- Tampilan logo diperbesar -->
+  <div class="logo-zoom" hidden role="dialog" aria-modal="true" aria-label="Logo Pantherion" tabindex="-1">
+    <img src="img/logo-zoom.jpg" alt="Logo Pantherion IF 26" draggable="false">
+    <p>PANTHERION · Informatika Angkatan 26<span>Klik di mana saja atau tekan Esc untuk menutup</span></p>
+  </div>
+
+  <main id="konten">
+    <section class="section">
+      <div class="container">
+        <div class="about">
+          <div class="section-title"><h2>Tentang Kami</h2></div>
+          <p><strong>Pantherion</strong> adalah keluarga besar mahasiswa Program Studi Informatika angkatan 2026.
+            Namanya berasal dari <strong>Panther</strong>, maskot angkatan yang melambangkan keberanian dan
+            naluri bertahan hidup, dan <strong>Ion</strong>, simbol kekuatan kolektif menuju era yang lebih maju.</p>
+          <p>Kami hadir dari berbagai daerah dengan latar belakang yang beragam, dipersatukan oleh
+            ketertarikan yang sama pada teknologi dan semangat untuk berkembang bersama.</p>
+          <p>Website ini menjadi ruang untuk mengenal angkatan kami: makna logo dan filosofi angkatan,
+            dokumentasi kegiatan, serta direktori anggota yang bisa dicari berdasarkan nama atau NIM.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-title center"><h2>Angkatan dalam Angka</h2></div>
+        <div class="stats">
+          <div class="stat"><strong>171</strong><span>Mahasiswa</span></div>
+          <div class="stat"><strong>2026</strong><span>Tahun Masuk</span></div>
+          <div class="stat"><strong>H1D026</strong><span>Kode NIM</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint">
+      <div class="container">
+        <div class="section-title"><h2>Kenali Lebih Dalam</h2></div>
+        <div class="link-cards">
+          <a href="filosofi.html" class="link-card"><strong>Filosofi Angkatan</strong><span>Arti nama Pantherion dan makna setiap unsur logo.</span><em>Selengkapnya →</em></a>
+          <a href="album.html" class="link-card"><strong>Album Kegiatan</strong><span>Dokumentasi momen kebersamaan angkatan.</span><em>Lihat album →</em></a>
+          <a href="search.html" class="link-card"><strong>Cari Anggota</strong><span>Temukan teman seangkatan lewat nama atau NIM.</span><em>Mulai cari →</em></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt=""><span><strong>PANTHERION</strong><small>Informatika Angkatan 26</small></span></a>
+        <p>Website resmi Pantherion, angkatan 26 Program Studi Informatika.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Profil</a></li>
+          <li><a href="filosofi.html">Filosofi</a></li>
+          <li><a href="album.html">Album</a></li>
+          <li><a href="search.html">Cari Orang</a></li>
+          <li><a href="developer.html">Developer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li>Program Studi Informatika</li>
+          <li>Instagram: @informatika26</li>
+          <li>Email: informatika26@example.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Pantherion · Informatika Angkatan 26. Dibuat oleh angkatan, untuk angkatan.</div>
+  </footer>
+
+  <script src="js/beranda.js"></script>
+  <script src="js/easteregg.js"></script>
+</body>
+</html>
