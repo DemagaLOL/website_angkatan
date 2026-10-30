@@ -1,0 +1,63 @@
+/* Easter egg: mode virus (html.virus), tombol musik/earrape/sembuhkan
+   Pemilik: Wendra */
+
+/* ---------- Easter egg: mode virus (html.virus, dipicu 5x klik logo beranda) ---------- */
+html.virus {
+  --navy-900:#ff006e; --navy-800:#8338ec; --navy-700:#3a86ff; --navy-600:#06d6a0; --navy-500:#ffbe0b;
+  --navy-100:#fff3b0; --navy-50:#e0fff4; --red:#ff006e; --red-light:#ffbe0b; --red-soft:#ffd6ec;
+  --line:#ff9ff3; --text:#2b0057; --muted:#7b2cbf;
+}
+html.virus body { font-family:"Comic Sans MS","Comic Sans","Chalkboard SE",cursive;
+  background:linear-gradient(120deg,#fff0f6,#e0fff4,#fff8d6,#e7e0ff); background-size:400% 400%;
+  animation:virus-bg 6s ease infinite; }
+/* Setiap blok berputar warnanya dengan tempo berbeda */
+html.virus .topbar, html.virus .navbar, html.virus .page-hero, html.virus .section, html.virus .site-footer {
+  animation:virus-hue 4s linear infinite; }
+html.virus .navbar { animation-duration:2.5s; }
+html.virus .section:nth-of-type(2n) { animation-direction:reverse; animation-duration:3s; }
+html.virus .site-footer { animation-duration:5s; }
+html.virus h1, html.virus h2, html.virus h3, html.virus .logo strong, html.virus .stat strong {
+  background:linear-gradient(90deg,#ff006e,#fb5607,#ffbe0b,#06d6a0,#3a86ff,#8338ec,#ff006e);
+  background-size:200% auto; -webkit-background-clip:text; background-clip:text; color:transparent;
+  animation:virus-text 1.5s linear infinite; }
+html.virus h1, html.virus h2 { animation:virus-text 1.5s linear infinite, virus-wobble 1.2s ease-in-out infinite; display:inline-block; }
+html.virus .card, html.virus .stat, html.virus .link-card, html.virus .gallery figure, html.virus .makna-item,
+html.virus .member, html.virus .swatch, html.virus .name-card { animation:virus-wobble 1.8s ease-in-out infinite; }
+html.virus .card:nth-child(3n), html.virus .gallery figure:nth-child(3n), html.virus .stat:nth-child(2) { animation-delay:-.6s; animation-direction:reverse; }
+html.virus .btn, html.virus .virus-cure { animation:virus-pulse .8s ease-in-out infinite; }
+html.virus .hero-track { animation-duration:12s; }
+html.virus .hero-logo img { animation:virus-spin 3s linear infinite; }
+/* Garis-garis layar rusak */
+html.virus body::after { content:""; position:fixed; inset:0; z-index:999; pointer-events:none;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.05) 0 2px, transparent 2px 4px);
+  animation:virus-flicker .2s steps(2) infinite; }
+
+.virus-controls { position:fixed; right:1rem; bottom:1rem; z-index:1000; display:flex; gap:.6rem; align-items:center; }
+.virus-sound { width:52px; height:52px; border-radius:50%; border:3px solid #fff; cursor:pointer; font-size:1.4rem;
+  background:linear-gradient(135deg,#ff006e,#8338ec); box-shadow:0 8px 24px rgba(0,0,0,.3); }
+.virus-ear { width:52px; height:52px; border-radius:50%; border:3px solid #fff; cursor:pointer; font-size:1.4rem;
+  background:linear-gradient(135deg,#fb5607,#ffbe0b); box-shadow:0 8px 24px rgba(0,0,0,.3); animation:virus-shake .15s infinite; }
+.virus-ear.off { animation:none; filter:grayscale(1); opacity:.6; }
+@keyframes virus-shake { 50% { transform:translate(1px,-1px) rotate(4deg); } }
+.virus-cure { font:inherit; font-weight:700; font-size:1rem;
+  padding:.8rem 1.3rem; border:3px solid #fff; border-radius:999px; cursor:pointer; color:#fff;
+  background:linear-gradient(135deg,#06d6a0,#3a86ff); box-shadow:0 8px 24px rgba(0,0,0,.3); }
+.virus-boot { position:fixed; inset:0; z-index:1001; display:grid; place-items:center; background:#000; pointer-events:none;
+  animation:virus-boot 1.6s ease-in forwards; }
+.virus-boot p { color:#39ff14; font:700 clamp(1.4rem,5vw,2.6rem) ui-monospace,Consolas,monospace; text-align:center;
+  text-shadow:3px 0 #ff006e, -3px 0 #3a86ff; animation:virus-glitch .12s steps(2) infinite; }
+.virus-boot span { display:block; margin-top:.5rem; font-size:.4em; color:#ffbe0b; }
+
+@keyframes virus-bg { 50% { background-position:100% 50%; } }
+@keyframes virus-hue { to { filter:hue-rotate(360deg); } }
+@keyframes virus-text { to { background-position:200% center; } }
+@keyframes virus-wobble { 25% { transform:rotate(-2deg) translateY(-2px); } 75% { transform:rotate(2deg) translateY(2px); } }
+@keyframes virus-pulse { 50% { transform:scale(1.08); } }
+@keyframes virus-spin { 50% { transform:rotate(180deg) scale(1.1); } to { transform:rotate(360deg); } }
+@keyframes virus-flicker { 50% { opacity:.6; } }
+@keyframes virus-glitch { 50% { transform:translate(3px,-2px) skewX(8deg); } }
+@keyframes virus-boot { 0%, 70% { opacity:1; } 100% { opacity:0; visibility:hidden; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html.virus body, html.virus *, html.virus body::after { animation:none !important; }
+}
