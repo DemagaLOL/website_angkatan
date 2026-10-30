@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cari Orang - Pantherion IF 26</title>
+  <link rel="icon" href="img/logo-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cari.css">
+  <link rel="stylesheet" href="css/easteregg.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+  <div class="topbar"><div class="container">
+    <span>Program Studi Informatika · Angkatan 2026</span>
+    <span>Bersama Bertumbuh, Bersama Berkarya</span>
+  </div></div>
+  <nav class="navbar"><div class="container">
+    <a href="index.html" class="logo"><img src="img/logo.png" alt=""><span><strong>PANTHERION</strong><small>Informatika Angkatan 26</small></span></a>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="nav-btn" aria-label="Buka menu"><span></span><span></span><span></span></label>
+    <ul>
+      <li><a href="index.html">Profil</a></li>
+      <li><a href="filosofi.html">Filosofi</a></li>
+      <li><a href="album.html">Album</a></li>
+      <li><a href="search.html" class="active">Cari Orang</a></li>
+      <li><a href="developer.html">Developer</a></li>
+    </ul>
+  </div></nav>
+
+  <header class="page-hero" style="padding-bottom:6rem">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Beranda</a></li>
+        <li aria-current="page">Cari Orang</li>
+      </ol>
+      <h1>Cari Anggota Angkatan</h1>
+      <p>Temukan teman seangkatan berdasarkan nama atau NIM.</p>
+    </div>
+  </header>
+
+  <main id="konten">
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="search-panel">
+          <div class="search-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input type="search" id="searchInput" placeholder="Ketik nama atau NIM... (contoh: amelia, 048, H1D026120)" autocomplete="off" autofocus aria-label="Cari nama atau NIM">
+          </div>
+          <p id="count"></p>
+        </div>
+        <div id="results"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Popup profil, diisi oleh js/search.js -->
+  <dialog id="profile" aria-labelledby="profile-name">
+    <div class="profile-card">
+      <div class="profile-cover">
+        <img src="img/logo.png" alt="" class="profile-mark">
+        <button type="button" class="profile-close" data-act="close" aria-label="Tutup">&times;</button>
+      </div>
+      <div class="profile-body">
+        <span class="profile-photo"></span>
+        <h2 id="profile-name"></h2>
+        <p class="profile-nim"></p>
+        <dl class="profile-info">
+          <div><dt>NIM</dt><dd data-field="nim"></dd></div>
+          <div><dt>No. Urut</dt><dd data-field="no"></dd></div>
+          <div><dt>Program Studi</dt><dd>Informatika</dd></div>
+          <div><dt>Angkatan</dt><dd>2026 · Pantherion</dd></div>
+        </dl>
+        <button type="button" class="profile-copy" data-act="copy">Salin tautan profil</button>
+      </div>
+      <div class="profile-nav">
+        <button type="button" data-act="prev" aria-label="Profil sebelumnya">&larr; Sebelumnya</button>
+        <span class="profile-pos"></span>
+        <button type="button" data-act="next" aria-label="Profil berikutnya">Berikutnya &rarr;</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt=""><span><strong>PANTHERION</strong><small>Informatika Angkatan 26</small></span></a>
+        <p>Website resmi Pantherion, angkatan 26 Program Studi Informatika.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Profil</a></li>
+          <li><a href="filosofi.html">Filosofi</a></li>
+          <li><a href="album.html">Album</a></li>
+          <li><a href="search.html">Cari Orang</a></li>
+          <li><a href="developer.html">Developer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li>Program Studi Informatika</li>
+          <li>Instagram: @informatika26</li>
+          <li>Email: informatika26@example.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Pantherion · Informatika Angkatan 26. Dibuat oleh angkatan, untuk angkatan.</div>
+  </footer>
+  <script src="js/search.js"></script>
+  <script src="js/easteregg.js"></script>
+</body>
+</html>
