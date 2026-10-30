@@ -1,0 +1,141 @@
+/* Dasar tampilan semua halaman: palet, navbar, banner, section, tombol, footer, responsif
+   Pemilik: Rafly */
+
+/* Palet diambil dari logo Pantherion: navy -> royal blue, putih, aksen merah bintang.
+   Pola layout terinspirasi unsoed.ac.id */
+:root {
+  --navy-900:#02041a; --navy-800:#010947; --navy-700:#010e6e; --navy-600:#0723f3;
+  --navy-500:#3a52ff; --navy-100:#e2e7ff; --navy-50:#f3f5ff;
+  --red:#e3121b; --red-light:#ff4d4d; --red-soft:#ffe0e1;
+  --text:#141a33; --muted:#55607f; --line:#d9def5; --white:#fff;
+  --shadow:0 6px 20px rgba(1,9,71,.10);
+  --radius:12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:"Poppins",system-ui,sans-serif; background:var(--white); color:var(--text);
+  line-height:1.7; min-height:100vh; display:flex; flex-direction:column; }
+main { flex:1; }
+img { max-width:100%; display:block; }
+a { color:var(--navy-600); }
+
+.skip-link { position:absolute; left:-999px; top:0; background:var(--red); color:#fff;
+  padding:.5rem 1rem; z-index:100; }
+.skip-link:focus { left:1rem; }
+
+.container { max-width:1140px; margin:0 auto; padding:0 1.25rem; width:100%; }
+
+/* ---------- Topbar & Header ---------- */
+.topbar { background:var(--navy-900); color:#b9c8dc; font-size:.8rem; }
+.topbar .container { display:flex; justify-content:space-between; gap:1rem; padding-top:.45rem; padding-bottom:.45rem; flex-wrap:wrap; }
+.topbar span:last-child { color:var(--red-light); font-weight:500; }
+
+.navbar { background:var(--navy-800); color:#fff; position:sticky; top:0; z-index:50;
+  box-shadow:0 2px 12px rgba(0,0,0,.25); }
+.navbar .container { display:flex; justify-content:space-between; align-items:center;
+  gap:1rem; min-height:76px; flex-wrap:wrap; }
+.logo { display:flex; align-items:center; gap:.75rem; color:#fff; text-decoration:none; }
+.logo img { width:46px; height:46px; border-radius:10px; box-shadow:0 0 0 1px rgba(255,255,255,.15); }
+.logo strong { display:block; font-size:1.05rem; letter-spacing:.06em; line-height:1.2; }
+.logo small { display:block; font-size:.72rem; color:#b9c8dc; letter-spacing:.04em; }
+.navbar ul { display:flex; gap:.25rem; list-style:none; }
+.navbar ul a { display:block; padding:.6rem .9rem; color:#dbe5f2; text-decoration:none;
+  font-size:.88rem; font-weight:500; text-transform:uppercase; letter-spacing:.04em;
+  border-bottom:3px solid transparent; transition:color .2s, border-color .2s; }
+.navbar ul a:hover { color:#fff; }
+.navbar ul a.active { color:var(--red-light); border-bottom-color:var(--red-light); }
+
+/* Hamburger (tanpa JS) */
+#nav-toggle { display:none; }
+.nav-btn { display:none; cursor:pointer; padding:.5rem; }
+.nav-btn span { display:block; width:24px; height:2px; background:#fff; margin:5px 0; transition:.3s; }
+
+/* ---------- Page hero + breadcrumb ---------- */
+.page-hero { position:relative; overflow:hidden; color:#fff; padding:3.5rem 0 3rem;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(255,77,77,.14), transparent 35%),
+    radial-gradient(circle at 100% 100%, rgba(7,35,243,.75), transparent 55%),
+    linear-gradient(135deg, var(--navy-900), var(--navy-800) 45%, var(--navy-700)); }
+.page-hero::after { content:""; position:absolute; inset:0; opacity:.07;
+  background-image:linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg,#fff 1px, transparent 1px);
+  background-size:32px 32px; }
+.page-hero .container { position:relative; z-index:1; }
+.breadcrumb { display:flex; gap:.5rem; list-style:none; font-size:.85rem; color:#b9c8dc; margin-bottom:.75rem; flex-wrap:wrap; }
+.breadcrumb li + li::before { content:"/"; margin-right:.5rem; opacity:.6; }
+.breadcrumb a { color:#dbe5f2; text-decoration:none; }
+.breadcrumb a:hover { color:var(--red-light); }
+.breadcrumb [aria-current] { color:var(--red-light); }
+.page-hero h1 { font-size:clamp(1.8rem,4vw,2.6rem); line-height:1.25; font-weight:700; }
+.page-hero p { color:#cfdbea; max-width:640px; margin-top:.5rem; }
+
+/* Tombol & label */
+.eyebrow { display:inline-block; font-size:.78rem; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--red-light); margin-bottom:.5rem; }
+.btn-group { display:flex; gap:.75rem; margin-top:1.75rem; flex-wrap:wrap; }
+.btn { display:inline-block; padding:.75rem 1.5rem; border-radius:8px; font-weight:600;
+  font-size:.92rem; text-decoration:none; transition:transform .2s, box-shadow .2s, background .2s; }
+.btn:hover { transform:translateY(-2px); }
+.btn-accent { background:var(--red); color:#fff; box-shadow:0 6px 18px rgba(227,18,27,.35); }
+.btn-outline { border:2px solid rgba(255,255,255,.5); color:#fff; }
+.btn-outline:hover { border-color:#fff; background:rgba(255,255,255,.08); }
+
+/* ---------- Section ---------- */
+.section { padding:4rem 0; }
+.section.alt { background:var(--navy-50); }
+.section.tint { background:var(--navy-100); }
+.section-title { margin-bottom:2rem; }
+.section-title h2 { font-size:clamp(1.4rem,3vw,1.85rem); color:var(--navy-800); line-height:1.3; }
+.section-title h2::after { content:""; display:block; width:56px; height:4px; border-radius:2px;
+  background:var(--red); margin-top:.75rem; }
+.section-title.center { text-align:center; }
+.section-title.center h2::after { margin-left:auto; margin-right:auto; }
+.section-title p { color:var(--muted); margin-top:.75rem; max-width:680px; }
+.section-title.center p { margin-left:auto; margin-right:auto; }
+p + p { margin-top:.9rem; }
+
+.split { display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; align-items:center; }
+
+/* Kartu umum */
+.box { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:1.75rem; box-shadow:var(--shadow); }
+.box h3 { color:var(--navy-800); margin-bottom:.5rem; }
+.grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.25rem; }
+
+/* ---------- Kenali Lebih Dalam ---------- */
+.link-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.25rem; }
+.link-card { display:flex; flex-direction:column; gap:.4rem; background:#fff; padding:1.5rem; border-radius:var(--radius);
+  text-decoration:none; color:var(--text); border:1px solid var(--line); box-shadow:var(--shadow);
+  border-top:4px solid var(--navy-600); transition:transform .2s, border-color .2s; }
+.link-card:hover { transform:translateY(-4px); border-top-color:var(--red-light); }
+.link-card strong { color:var(--navy-800); font-size:1.05rem; }
+.link-card span { color:var(--muted); font-size:.9rem; }
+.link-card em { margin-top:auto; padding-top:.5rem; font-style:normal; font-weight:600; font-size:.88rem; color:var(--navy-600); }
+
+/* ---------- Footer ---------- */
+.site-footer { background:var(--navy-900); color:#b9c8dc; font-size:.9rem; }
+.site-footer .container { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:2.5rem; padding-top:3.5rem; padding-bottom:2.5rem; }
+.site-footer h4 { color:#fff; font-size:.95rem; margin-bottom:1rem; text-transform:uppercase; letter-spacing:.06em; }
+.site-footer h4::after { content:""; display:block; width:32px; height:3px; background:var(--red); margin-top:.5rem; border-radius:2px; }
+.site-footer ul { list-style:none; display:grid; gap:.45rem; }
+.site-footer a { color:#b9c8dc; text-decoration:none; }
+.site-footer a:hover { color:var(--red-light); }
+.site-footer .logo { margin-bottom:1rem; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,.08); text-align:center; padding:1.1rem; font-size:.82rem; color:#8094ad; }
+
+/* ---------- Responsif ---------- */
+@media (max-width:860px) {
+  .nav-btn { display:block; }
+  .navbar ul { display:none; width:100%; flex-direction:column; padding-bottom:1rem; }
+  .navbar ul a { border-bottom:none; border-left:3px solid transparent; }
+  .navbar ul a.active { border-left-color:var(--red-light); background:rgba(255,255,255,.05); }
+  #nav-toggle:checked ~ ul { display:flex; }
+  #nav-toggle:checked + .nav-btn span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  #nav-toggle:checked + .nav-btn span:nth-child(2) { opacity:0; }
+  #nav-toggle:checked + .nav-btn span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  .split { grid-template-columns:1fr; gap:2rem; }
+  .site-footer .container { grid-template-columns:1fr; gap:2rem; }
+}
+@media (max-width:600px) {
+  .topbar span:first-child { display:none; }
+  .section { padding:3rem 0; }
+  .btn-group { justify-content:center; }
+}
