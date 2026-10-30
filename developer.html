@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer - Pantherion IF 26</title>
+  <link rel="icon" href="img/logo-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/developer.css">
+  <link rel="stylesheet" href="css/easteregg.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+  <div class="topbar"><div class="container">
+    <span>Program Studi Informatika · Angkatan 2026</span>
+    <span>Bersama Bertumbuh, Bersama Berkarya</span>
+  </div></div>
+  <nav class="navbar"><div class="container">
+    <a href="index.html" class="logo"><img src="img/logo.png" alt=""><span><strong>PANTHERION</strong><small>Informatika Angkatan 26</small></span></a>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="nav-btn" aria-label="Buka menu"><span></span><span></span><span></span></label>
+    <ul>
+      <li><a href="index.html">Profil</a></li>
+      <li><a href="filosofi.html">Filosofi</a></li>
+      <li><a href="album.html">Album</a></li>
+      <li><a href="search.html">Cari Orang</a></li>
+      <li><a href="developer.html" class="active">Developer</a></li>
+    </ul>
+  </div></nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Beranda</a></li>
+        <li aria-current="page">Developer</li>
+      </ol>
+      <h1>Tim Developer</h1>
+      <p>Orang-orang di balik website Pantherion.</p>
+    </div>
+  </header>
+
+  <main id="konten">
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><h2>Tim</h2></div>
+        <!-- Tim developer (no. urut 009, 122, 146, 148); klik kartu untuk membuka profil di halaman Cari Orang -->
+        <div class="team">
+          <a class="member" href="search.html?nim=H1D026009">
+            <div class="avatar"><img src="img/foto/H1D026009.jpg" alt="Foto Raflyanno Kautsar Wibowo"></div>
+            <span class="nick">Rafly</span>
+            <strong>Raflyanno Kautsar Wibowo</strong>
+            <div class="nim">H1D026009</div>
+            <span class="role">Developer</span>
+          </a>
+          <a class="member" href="search.html?nim=H1D026122">
+            <div class="avatar"><img src="img/foto/H1D026122.jpg" alt="Foto Cendekiawan Abdul Ghani"></div>
+            <span class="nick">Deki</span>
+            <strong>Cendekiawan Abdul Ghani</strong>
+            <div class="nim">H1D026122</div>
+            <span class="role">Developer</span>
+          </a>
+          <a class="member" href="search.html?nim=H1D026146">
+            <div class="avatar"><img src="img/foto/H1D026146.jpg" alt="Foto Muhammad Dzaki Nur Ramadhani"></div>
+            <span class="nick">Dzaki</span>
+            <strong>Muhammad Dzaki Nur Ramadhani</strong>
+            <div class="nim">H1D026146</div>
+            <span class="role">Developer</span>
+          </a>
+          <a class="member" href="search.html?nim=H1D026148">
+            <div class="avatar"><img src="img/foto/H1D026148.jpg" alt="Foto Danawendra Girinandana"></div>
+            <span class="nick">Wendra</span>
+            <strong>Danawendra Girinandana</strong>
+            <div class="nim">H1D026148</div>
+            <span class="role">Developer</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container split">
+        <div>
+          <div class="section-title"><h2>Teknologi</h2></div>
+          <ul class="tech">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>JSON</li>
+            <li>Python (konversi data)</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Sumber Data</h3>
+          <p>Data mahasiswa berasal dari spreadsheet angkatan yang dikonversi ke
+            <code>data/mahasiswa.json</code> menggunakan <code>convert.py</code>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt=""><span><strong>PANTHERION</strong><small>Informatika Angkatan 26</small></span></a>
+        <p>Website resmi Pantherion, angkatan 26 Program Studi Informatika.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Profil</a></li>
+          <li><a href="filosofi.html">Filosofi</a></li>
+          <li><a href="album.html">Album</a></li>
+          <li><a href="search.html">Cari Orang</a></li>
+          <li><a href="developer.html">Developer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li>Program Studi Informatika</li>
+          <li>Instagram: @informatika26</li>
+          <li>Email: informatika26@example.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Pantherion · Informatika Angkatan 26. Dibuat oleh angkatan, untuk angkatan.</div>
+  </footer>
+  <script src="js/easteregg.js"></script>
+</body>
+</html>
